@@ -1,130 +1,207 @@
-import { useContext } from 'react';
-import { useTranslation } from 'react-i18next';
+/* eslint-disable indent */
+/* eslint-disable no-unused-vars */
+// import { useContext } from 'react';
+// import { useTranslation } from 'react-i18next';
 import {
-  LoaderContext,
-  FitText,
-  QrCode,
-  useMedia,
-  useConfig,
-  useTemplate,
-  useTemplateVal,
-  useTemplateBoolVal,
-  useTemplateIntVal,
-  useTemplateFloatVal,
-  useScreenInfo,
+// LoaderContext,
+FitText,
+QrCode,
+useMedia,
+useConfig,
+useTemplate,
+useTemplateVal,
+useTemplateBoolVal,
+useTemplateIntVal,
+useTemplateFloatVal,
+useScreenInfo,
 } from '@dsplay/react-template-utils';
 import './style.sass';
 
 function Main() {
-  const config = useConfig();
-  const media = useMedia();
-  const template = useTemplate();
-  const { screenFormat } = useScreenInfo();
-  const context = useContext(LoaderContext);
+  // const config = useConfig();
+  // const media = useMedia();
+  // const template = useTemplate();
+  // const { screenFormat } = useScreenInfo();
+  // const context = useContext(LoaderContext);
 
-  const { locale } = config;
-  const { duration } = media;
+  // const { locale } = config;
+  // const { duration } = media;
 
-  const { t, i18n } = useTranslation();
+  // const { t, i18n } = useTranslation();
 
-  i18n.changeLanguage(locale);
+  // i18n.changeLanguage(locale);
 
   return (
-    <div className="main">
-      <h1>DSPLAY Template</h1>
-      <h2>Raw Values</h2>
-      <div>
-        <p>
-          {t('Context')}
-          :
-        </p>
-        <pre>{JSON.stringify(context, null, 4)}</pre>
-
-        <p>
-          {t('Media')}
-          :
-        </p>
-        <pre>{JSON.stringify(media, null, 4)}</pre>
-
-        <p>
-          {t('Template')}
-          :
-        </p>
-        <pre>{JSON.stringify(template, null, 4)}</pre>
-
-        <p>
-          {t('Config')}
-          :
-        </p>
-        <pre>{JSON.stringify(config, null, 4)}</pre>
-      </div>
-
-      <h2>Configuration Values Examples</h2>
-      <div>
-        <p>
-          Locale:
-          <span className="val">{locale}</span>
-        </p>
-      </div>
-      <h2>Media Values Examples</h2>
-      <div>
-        <p>
-          Duration:
-          <span className="val">{duration}</span>
-        </p>
-      </div>
-      <h2>Custom Template Var Examples</h2>
-      <div>
-        <p>
-          String:
-          <span className="val">{useTemplateVal('title', 'Default Value')}</span>
-        </p>
-        <p>
-          Boolean:
-          <span className="val">{useTemplateBoolVal('expanded', true) ? 'Yes' : 'No'}</span>
-        </p>
-        <p>
-          Int:
-          <span className="val">{useTemplateIntVal('page_size', 10)}</span>
-        </p>
-        <p>
-          Double:
-          <span className="val">{useTemplateFloatVal('rate', 0.75)}</span>
-        </p>
-        <p>
-          Image:
-          <img className="val" alt="" src={useTemplateVal('logo')} />
-        </p>
-        <p>
-          ScreenFormat:
-          <span className="val">{screenFormat}</span>
-        </p>
-      </div>
-      <h2>Fit Text Example</h2>
-      <div>
-        <p>Short Text in box:</p>
-        <div style={{
-          border: '1px solid white', padding: '1em', width: '80%', height: '10em',
-        }}
-        >
-          <FitText>Small</FitText>
+    <div className="container">
+      <head>
+        <img src="" alt="logotipo" />
+      </head>
+      <form action="">
+        <div id="company">
+          {/* companyy */}
+          <h1>company</h1>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" id="name" placeholder="name" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="url" name="" id="website" placeholder="website" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="phone" placeholder="phone" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="email" name="" id="email" placeholder="email" />
+          </div>
+          {/* address */}
+          <h4>address</h4>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="address" placeholder="address" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="number" placeholder="number" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="city" placeholder="city" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="state" placeholder="state" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="countryCode" placeholder="country code" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="postalCode" placeholder="postal code" />
+          </div>
         </div>
-        <p>Long Text in box:</p>
-        <div style={{
-          border: '1px solid white', padding: '1em', width: '80%', height: '10em',
-        }}
-        >
-          <FitText style={{ textAlign: 'center' }}>Very Long Text Very Long Text Very Long Text Very Long Text Very Long Text Very Long Text Very Long Text Very Long Text Very Long Text Very Long Text Very Long Text Very Long Text Very Long Text Very Long Text Very Long Text </FitText>
+        <div id="billing-info">
+          <h1>billing info</h1>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="accountType" placeholder="account type" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="taxId" placeholder="tax id" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="email" placeholder="email" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="phone" placeholder="phone" />
+          </div>
+          {/* address */}
+          <h4>address</h4>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="address" placeholder="address" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="number" placeholder="number" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="city" placeholder="city" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="state" placeholder="state" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="countryCode" placeholder="country code" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="postalCode" placeholder="postal code" />
+          </div>
+          {/* payment */}
+          <h4>payment</h4>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="method" placeholder="method" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="frequency" placeholder="frequency" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="day" placeholder="day" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="withholdingPct" placeholder="withholding pct" />
+          </div>
         </div>
-      </div>
-      <h2>QR Code Example</h2>
-      <div>
-        <QrCode
-          options={{
-            text: 'abcdef',
-          }}
-        />
-      </div>
+        <div id="user">
+          <h1>user</h1>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="name" placeholder="name" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="email" placeholder="email" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="userName" placeholder="user Name" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="password " placeholder="password" />
+          </div>
+        </div>
+        <div id="settings">
+          <h1>settings</h1>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="timezone" placeholder="timezone" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="theme" placeholder="theme" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="maxTerminals" placeholder="max terminals" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="quota" placeholder="quota" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="active" placeholder="active" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="evalutionPeriodDays" placeholder="evalution period days" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="text" name="" id="qrCodesEnable" placeholder="qr codes enable" />
+          </div>
+          <div className="input-container">
+            <span>sdf</span>
+            <input type="" name="" id="terminalStatusNotificationEnable" placeholder="terminal status notification enable" />
+          </div>
+        </div>
+        <button type="submit"> send </button>
+      </form>
     </div>
 
   );
