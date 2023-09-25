@@ -1,5 +1,280 @@
-.container
-  background-color: orange
-  width: 70vw
-  padding: 2rem
+section
+  width: 100vw
+  background-color: green
+  background-size: cover !important
+  background-position: center !important
+  background-repeat: no-repeat !important
   
+  display: flex
+  justify-content: center
+  align-items: center
+
+#container
+  width: 60%
+  margin: 7rem 0
+  border-radius: 1rem
+  position: relative
+
+#bg
+  width: 100%
+  height: 100%
+  opacity: 0.9
+  border-radius: 1rem
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 0
+
+#container div:last-child
+  z-index: 2
+  position: relative
+
+header
+  display: flex
+  justify-content: center
+  padding: 2rem 0
+
+  img
+    width: 20rem
+
+form
+  h1
+
+  h2
+    font-size: 3.5rem
+  
+  h3
+    font-size: 2.5rem
+  
+  span
+    font-size: 1.8rem
+    margin-bottom: 0.5rem
+
+
+  input
+    width: 320px
+    height: 3.5rem
+    border-radius: 5px
+    padding-left: 1rem
+    font-size: 1.2rem
+
+
+.form-section
+  display: flex
+  flex-direction: column
+  margin: 1rem 0
+
+.section-title
+  text-align: center
+
+.section-inputs
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+  .input-container
+    display: flex
+    flex-direction: column
+    margin: 0.8rem
+
+#company
+  display: flex;
+  flex-direction: column;
+
+#button-submit
+  height: 6rem
+  display: flex   
+  justify-content: center
+  align-items: center
+  margin: 3rem 0
+
+  button
+    height: 3.3rem
+    width: 10rem
+    
+    cursor: pointer
+ 
+    border-radius: 0.75rem
+    border: 1px solid transparent
+ 
+    line-height: 1.5rem
+    font-size: 2rem
+    font-weight: 600
+    text-transform: uppercase
+ 
+    transition-duration: .2s
+
+  
+  button:hover
+    opacity: 80%
+
+
+// @media only screen and (min-width: 1950px)
+
+@media only screen and (max-width: 1400px)
+  header
+    img
+      width: 18rem
+
+  form
+    h1
+
+    h2
+      font-size: 3rem
+    
+    h3
+      font-size: 2rem
+    
+    span
+      font-size: 1.4rem
+      margin-bottom: 0.5rem
+
+    input
+      width: 300px
+      height: 3rem
+      font-size: 1.1rem
+
+  #button-submit
+    height: 3rem
+    // margin: 3rem 0
+
+    button
+      font-size: 1.5rem
+
+@media only screen and (max-width: 1200px)
+  #container
+    width: 70%
+
+  header
+    img
+      width: 18rem
+
+  form
+    h1
+
+    h2
+      font-size: 2.8rem
+    
+    h3
+      font-size: 1.8rem
+    
+    span
+      // font-size: 1.4rem
+      // margin-bottom: 0.5rem
+
+    input
+      width: 290px
+      // height: 3rem
+      font-size: 1rem
+
+  #button-submit
+    height: 2rem
+    // margin: 3rem 0
+
+    button
+      // font-size: 1.5rem
+
+@media only screen and (max-width: 1000px)
+  #container
+    width: 90%
+
+  header
+    img
+      width: 16rem
+
+  form
+    h1
+
+    h2
+      font-size: 2.6rem
+    
+    h3
+      font-size: 1.6rem
+    
+    span
+      font-size: 1.3rem
+      // margin-bottom: 0.5rem
+
+    input
+      // width: 260px
+      height: 2.8rem
+      font-size: 0.9rem
+
+  #button-submit
+    height: 2rem
+    // margin: 3rem 0
+
+    button
+      font-size: 1.3rem
+      height: 3.2rem
+      width: 9rem
+
+@media only screen and (max-width: 800px)
+  #container
+    // width: 90%
+
+  header
+    img
+      // width: 16rem
+
+  form
+    h1
+
+    h2
+      font-size: 2.4rem
+    
+    h3
+      font-size: 1.4rem
+    
+    span
+      font-size: 1.1rem
+      // margin-bottom: 0.5rem
+
+    input
+      width: 220px
+      // height: 3rem
+      font-size: 0.8rem
+
+  #button-submit
+    // height: 2rem
+    // margin: 3rem 0
+
+    button
+      // font-size: 1.3rem
+      // height: 3.2rem
+      // width: 9rem
+
+@media only screen and (max-width: 600px)
+  #container
+    // width: 90%
+
+  header
+    img
+      width: 12rem
+
+  form
+    h1
+
+    h2
+      font-size: 2.2rem
+    
+    h3
+      font-size: 1.2rem
+    
+    span
+      font-size: 0.9rem
+      // margin-bottom: 0.5rem
+
+    input
+      width: 200px
+      height: 2.5rem
+      font-size: 0.7rem
+
+  #button-submit
+    // height: 2rem
+    // margin: 3rem 0
+
+    button
+      font-size: 1.2rem
+      // height: 3.2rem
+      // width: 9rem
