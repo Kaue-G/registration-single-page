@@ -1,12 +1,11 @@
-import { useMemo } from 'react';
+// import { useMemo } from 'react';
 import { I18nextProvider } from 'react-i18next';
 import { Loader, useScreenInfo, useTemplateVal } from '@dsplay/react-template-utils';
+import ThemeContextParent from '../../contexts/themeContext';
+import './style.sass';
+import i18n from '../../i18n';
 import Intro from '../intro';
 import Main from '../main';
-import i18n from '../../i18n';
-import './style.sass';
-
-// console.log(U, Loader)
 
 const MIN_LOADING_DURATION = 2000;
 
@@ -22,31 +21,32 @@ const fonts = [
   'Oswald',
 ];
 
-// other tasks (Promises) to run during template intro
-const tasks = [
-  Promise.resolve('my promise result'),
-];
-
 function App() {
   const { screenFormat } = useScreenInfo();
-  const logo = useTemplateVal('logo');
+  let logo = useTemplateVal('logo');
+  const backroundImg = useTemplateVal('backroundImg');
+
+  if (!logo) {
+    logo = './test-assets/dsplay-logo.png';
+  }
 
   // images to preload
-  const images = useMemo(() => [logo], [logo]);
+  const images = [logo, backroundImg];
 
   return (
     <I18nextProvider i18n={i18n}>
-      <Loader
-        placeholder={<Intro />}
-        fonts={fonts}
-        images={images}
-        minDuration={MIN_LOADING_DURATION}
-        tasks={tasks}
-      >
-        <div className={`app fade-in ${screenFormat}`}>
-          <Main />
-        </div>
-      </Loader>
+      <ThemeContextParent>
+        <Loader
+          placeholder={<Intro />}
+          fonts={fonts}
+          images={images}
+          minDuration={MIN_LOADING_DURATION}
+        >
+          <div className={`app fade-in ${screenFormat}`}>
+            <Main />
+          </div>
+        </Loader>
+      </ThemeContextParent>
     </I18nextProvider>
   );
 }

@@ -1,3 +1,9 @@
+/* eslint-disable quotes */
+/* eslint-disable indent */
+/* eslint-disable quote-props */
+/* eslint-disable no-unused-vars */
+/* eslint-disable camelcase */
+/* eslint-disable no-var */
 var dsplay_config = {
     // config parameters
     locale: 'pt_br',
@@ -21,11 +27,13 @@ var dsplay_media = {
 var dsplay_template = {
     // template parameter
 
-    template_var: "My Template Var",
+    // template_var: "My Template Var",
+    // title: "My Super Template",
+    // expanded: "false",
 
     logo: '../test-assets/dsplay-logo.png',
-
-    title: "My Super Template",
-    expanded: "false",
-
+    backroundImg: './test-assets/bgImg.jpg',
+    primaryColor: '#478266  ',
+    secondaryColor: '#4DA768',
+    textColor: '#fff',
 };
