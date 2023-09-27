@@ -5,19 +5,11 @@ import { useContext } from 'react';
 // import { useTranslation } from 'react-i18next';
 import {
 // LoaderContext,
-FitText,
-QrCode,
-useMedia,
-useConfig,
-useTemplate,
 useTemplateVal,
-useTemplateBoolVal,
-useTemplateIntVal,
-useTemplateFloatVal,
-useScreenInfo,
 } from '@dsplay/react-template-utils';
 import './style.sass';
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 import api from '../../services/api';
 import { ThemeContext } from '../../contexts/themeContext';
 
@@ -107,6 +99,7 @@ function Main() {
     });
   }
 
+  const { t } = useTranslation();
   const logo = useTemplateVal('logo');
   const { globalTheme } = useContext(ThemeContext);
 
@@ -130,46 +123,45 @@ function Main() {
             <div id="company">
               <div className="form-section">
                 <div className="section-title">
-                  {/* companyy */}
-                  <h2>company</h2>
+                  <h2>{t('company')}</h2>
                 </div>
                 <div className="section-inputs">
                   <div className="input-container">
-                    <span>name</span>
+                    <span>{t('name')}</span>
                     <input
                       type="text"
                       id="name"
-                      placeholder="name"
+                      placeholder="---"
                       {...register('name')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>website</span>
+                    <span>{t('website')}</span>
                     <input
                       type="url"
                       name=""
                       id="website"
-                      placeholder="website"
+                      placeholder="---"
                       {...register('website')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>phone</span>
+                    <span>{t('phone')}</span>
                     <input
                       type="text"
                       name=""
                       id="phone"
-                      placeholder="phone"
+                      placeholder="---"
                       {...register('phone')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>email</span>
+                    <span>{t('email')}</span>
                     <input
                       type="email"
                       name=""
                       id="email"
-                      placeholder="email"
+                      placeholder="---"
                       {...register('email')}
                     />
                   </div>
@@ -177,67 +169,66 @@ function Main() {
               </div>
               <div className="form-section">
                 <div className="section-title">
-                  {/* address */}
-                  <h3>address</h3>
+                  <h3>{t('address')}</h3>
                 </div>
                 <div className="section-inputs">
                   <div className="input-container">
-                    <span>address</span>
+                    <span>{t('address')}</span>
                     <input
                       type="text"
                       name=""
                       id="address"
-                      placeholder="address"
+                      placeholder="---"
                       {...register('address')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>number</span>
+                    <span>{t('number')}</span>
                     <input
                       type="text"
                       name=""
                       id="number"
-                      placeholder="number"
+                      placeholder="---"
                       {...register('name')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>city</span>
+                    <span>{t('city')}</span>
                     <input
                       type="text"
                       name=""
                       id="city"
-                      placeholder="city"
+                      placeholder="---"
                       {...register('city')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>state</span>
+                    <span>{t('state')}</span>
                     <input
                       type="text"
                       name=""
                       id="state"
-                      placeholder="state"
+                      placeholder="---"
                       {...register('state')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>country code</span>
+                    <span>{t('countryCode')}</span>
                     <input
                       type="text"
                       name=""
                       id="countryCode"
-                      placeholder="country code"
+                      placeholder="---"
                       {...register('countryCode')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>postal code</span>
+                    <span>{t('postalCode')}</span>
                     <input
                       type="text"
                       name=""
                       id="postalCode"
-                      placeholder="postal code"
+                      placeholder="---"
                       {...register('postalCode')}
                     />
                   </div>
@@ -247,46 +238,46 @@ function Main() {
             <div id="billing-info">
               <div className="form-section">
                 <div className="section-title">
-                  <h2>billing info</h2>
+                  <h2>{t('billingInfo')}</h2>
                 </div>
                 <div className="section-inputs">
                   <div className="input-container">
-                    <span>account type</span>
+                    <span>{t('accountType')}</span>
                     <input
                       type="text"
                       name=""
                       id="accountType"
-                      placeholder="account type"
+                      placeholder="---"
                       {...register('accountType')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>sdf</span>
+                    <span>{t('taxId')}</span>
                     <input
                       type="text"
                       name=""
                       id="taxId"
-                      placeholder="tax id"
+                      placeholder="---"
                       {...register('taxId')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>sdf</span>
+                    <span>{t('email')}</span>
                     <input
                       type="text"
                       name=""
                       id="email"
-                      placeholder="email"
+                      placeholder="---"
                       {...register('email2')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>sdf</span>
+                    <span>{t('phone')}</span>
                     <input
                       type="text"
                       name=""
                       id="phone"
-                      placeholder="phone"
+                      placeholder="---"
                       {...register('phone2')}
                     />
                   </div>
@@ -294,67 +285,66 @@ function Main() {
               </div>
               <div className="form-section">
                 <div className="section-title">
-                  {/* address */}
-                  <h3>address</h3>
+                  <h3>{t('address')}</h3>
                 </div>
                 <div className="section-inputs">
                   <div className="input-container">
-                    <span>address</span>
+                    <span>{t('address')}</span>
                     <input
                       type="text"
                       name=""
                       id="address"
-                      placeholder="address"
+                      placeholder="---"
                       {...register('address2')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>number</span>
+                    <span>{t('number')}</span>
                     <input
                       type="text"
                       name=""
                       id="number"
-                      placeholder="number"
+                      placeholder="---"
                       {...register('number')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>city</span>
+                    <span>{t('city')}</span>
                     <input
                       type="text"
                       name=""
                       id="city"
-                      placeholder="city"
+                      placeholder="---"
                       {...register('city2')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>state</span>
+                    <span>{t('state')}</span>
                     <input
                       type="text"
                       name=""
                       id="state"
-                      placeholder="state"
+                      placeholder="---"
                       {...register('state2')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>country Code</span>
+                    <span>{t('countryCode')}</span>
                     <input
                       type="text"
                       name=""
                       id="countryCode"
-                      placeholder="country code"
+                      placeholder="---"
                       {...register('countryCode2')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>postalCode</span>
+                    <span>{t('postalCode')}</span>
                     <input
                       type="text"
                       name=""
                       id="postalCode"
-                      placeholder="postal code"
+                      placeholder="---"
                       {...register('postalCode2')}
                     />
                   </div>
@@ -362,47 +352,46 @@ function Main() {
               </div>
               <div className="form-section">
                 <div className="section-title">
-                  {/* payment */}
-                  <h2>payment</h2>
+                  <h2>{t('payment')}</h2>
                 </div>
                 <div className="section-inputs">
                   <div className="input-container">
-                    <span>method</span>
+                    <span>{t('method')}</span>
                     <input
                       type="text"
                       name=""
                       id="method"
-                      placeholder="method"
+                      placeholder="---"
                       {...register('method')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>frequency</span>
+                    <span>{t('frequency')}</span>
                     <input
                       type="text"
                       name=""
                       id="frequency"
-                      placeholder="frequency"
+                      placeholder="---"
                       {...register('frequency')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>day</span>
+                    <span>{t('day')}</span>
                     <input
                       type="text"
                       name=""
                       id="day"
-                      placeholder="day"
+                      placeholder="---"
                       {...register('day')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>withholding Pct</span>
+                    <span>{t('withholdingPct')}</span>
                     <input
                       type="text"
                       name=""
                       id="withholdingPct"
-                      placeholder="withholding pct"
+                      placeholder="---"
                       {...register('withholdingPct')}
                     />
                   </div>
@@ -412,46 +401,46 @@ function Main() {
             <div id="user">
               <div className="form-section">
                 <div className="section-title">
-                  <h2>user</h2>
+                  <h2>{t('user')}</h2>
                 </div>
                 <div className="section-inputs">
                   <div className="input-container">
-                    <span>name</span>
+                    <span>{t('name')}</span>
                     <input
                       type="text"
                       name=""
                       id="name"
-                      placeholder="name"
+                      placeholder="---"
                       {...register('name2')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>email</span>
+                    <span>{t('email')}</span>
                     <input
                       type="text"
                       name=""
                       id="email"
-                      placeholder="email"
+                      placeholder="---"
                       {...register('userEmail')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>user name</span>
+                    <span>{t('userName')}</span>
                     <input
                       type="text"
                       name=""
                       id="userName"
-                      placeholder="user Name"
+                      placeholder="---"
                       {...register('userName')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>password</span>
+                    <span>{t('password')}</span>
                     <input
                       type="text"
                       name=""
                       id="password"
-                      placeholder="password"
+                      placeholder="---"
                       {...register('password')}
                     />
                   </div>
@@ -461,86 +450,86 @@ function Main() {
             <div id="settings">
               <div className="form-section">
                 <div className="section-title">
-                  <h2>settings</h2>
+                  <h2>{t('settings')}</h2>
                 </div>
                 <div className="section-inputs">
                   <div className="input-container">
-                    <span>time zone</span>
+                    <span>{t('timezone')}</span>
                     <input
                       type="text"
                       name=""
                       id="timezone"
-                      placeholder="timezone"
+                      placeholder="---"
                       {...register('timeZone')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>theme</span>
+                    <span>{t('theme')}</span>
                     <input
                       type="text"
                       name=""
                       id="theme"
-                      placeholder="theme"
+                      placeholder="---"
                       {...register('theme')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>max terminals</span>
+                    <span>{t('maxTerminals')}</span>
                     <input
                       type="text"
                       name=""
                       id="maxTerminals"
-                      placeholder="max terminals"
+                      placeholder="---"
                       {...register('maxTerminals')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>quota</span>
+                    <span>{t('quota')}</span>
                     <input
                       type="text"
                       name=""
                       id="quota"
-                      placeholder="quota"
+                      placeholder="---"
                       {...register('quota')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>active</span>
+                    <span>{t('active')}</span>
                     <input
                       type="text"
                       name=""
                       id="active"
-                      placeholder="active"
+                      placeholder="---"
                       {...register('userName')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>evalution period days</span>
+                    <span>{t('evalutionPeriodDsays')}</span>
                     <input
                       type="text"
                       name=""
                       id="evalutionPeriodDays"
-                      placeholder="evalution period days"
+                      placeholder="---"
                       {...register('evalutionPeriodDays')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>qr codes enable</span>
+                    <span>{t('qrCodesEnable')}</span>
                     <input
                       type="text"
                       name=""
                       id="qrCodesEnable"
-                      placeholder="qr codes enable"
+                      placeholder="---"
                       {...register('qrCodesEnable')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>termminal status notification enable</span>
+                    <span>{t('terminalStatusNotificationEnabled')}</span>
                     <input
                       type=""
                       name=""
                       id="terminalStatusNotificationEnable"
-                      placeholder="terminal status notification enable"
+                      placeholder="---"
                       {...register('terminalStatusNotifica')}
                     />
                   </div>
@@ -552,7 +541,7 @@ function Main() {
                 type="submit"
                 style={{ color: globalTheme.textColor, background: globalTheme.secondaryColor }}
               >
-                Send
+                {t('send')}
               </button>
             </div>
           </form>
