@@ -504,17 +504,17 @@ function Main() {
                     />
                   </div>
                   <div className="input-container">
-                    <span>{t('evalutionPeriodDsays')}</span>
+                    <span>{t('evaluationPeriodDays')}</span>
                     <input
                       type="text"
                       name=""
-                      id="evalutionPeriodDays"
+                      id="evaluationPeriodDays"
                       placeholder="---"
-                      {...register('evalutionPeriodDays')}
+                      {...register('evaluationPeriodDays')}
                     />
                   </div>
                   <div className="input-container">
-                    <span>{t('qrCodesEnable')}</span>
+                    <span>{t('qrCodesEnabled')}</span>
                     <input
                       type="text"
                       name=""

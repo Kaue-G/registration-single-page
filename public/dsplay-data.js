@@ -31,7 +31,7 @@ var dsplay_template = {
     // title: "My Super Template",
     // expanded: "false",
 
-    logo: '../test-assets/dsplay-logo.png',
+    logo: './test-assets/dsplay-logo.png',
     backroundImg: './test-assets/bgImg.jpg',
     primaryColor: '#478266  ',
     secondaryColor: '#4DA768',
